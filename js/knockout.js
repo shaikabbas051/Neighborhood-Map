@@ -1,4 +1,5 @@
 function initMap(){
+	var marker, infowindow;
 	var map  = new google.maps.Map(document.getElementById('map'),{
 		center: {lat: 17.385044,lng: 78.486671},
 		zoom: 11
@@ -8,7 +9,7 @@ function initMap(){
    		 var titles = models[i].name;
        	 var positions = models[i].location;
           //set marker
-          var marker = new google.maps.Marker({
+          marker = new google.maps.Marker({
             position: positions,
             title: titles,
             animation: google.maps.Animation.DROP
@@ -18,7 +19,7 @@ function initMap(){
           //declaring the content
           var content = models[i].name;
           //infowindow class to show information
-          var infowindow = new google.maps.InfoWindow({maxWidth: 200});
+          infowindow = new google.maps.InfoWindow({maxWidth: 200});
           //Event Listener when clicked on marker display info window
           marker.addListener('click',(function(marker,content){
               return function(){
@@ -26,12 +27,18 @@ function initMap(){
               infowindow.open(map,marker);};
             })(marker,content));
       }
-	ko.applyBindings(new viewModel());
-}
 
-var viewModel = function(data){
-	this.list = ko.observableArray();
-	for(var i = 0; i < models.length; i++){
-		this.list.push(models[i].name);
-	};
+	var viewModel = function(){
+		var self = this;
+		this.list = ko.observableArray();
+		for(var i = 0; i < models.length; i++){
+			this.list.push(models[i].name);
+		};
+		this.showinfo = function(){
+			infowindow.setContent(content);
+			infowindow.open(map,marker);
+		}
+
+	}
+	ko.applyBindings(new viewModel());
 }
