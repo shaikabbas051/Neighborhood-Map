@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighborhood Map</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/lib/knockout-3.4.2.js"></script>
+	<script src="js/lib/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id='optionsTab'>
+		<ul  id="listitems" data-bind="foreach: list">
+			<li><span data-bind="text: $data"></span></li>
+		</ul>
+	</div>
+	<div id="map"></div>
+	
+	<script src="js/knockout.js"></script>
+	<script async defer src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBLqz9_TGaRLlzRXjzKABgewLRXy1nHSbg&callback=initMap"></script>
+</body>
+</html>
