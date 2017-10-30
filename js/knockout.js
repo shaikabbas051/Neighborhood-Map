@@ -1,6 +1,8 @@
+var marker, infowindow, content, map, markers = [];
+
 function initMap(){
-	var marker, infowindow;
-	var map  = new google.maps.Map(document.getElementById('map'),{
+	
+	map  = new google.maps.Map(document.getElementById('map'),{
 		center: {lat: 17.385044,lng: 78.486671},
 		zoom: 11
 	});
@@ -14,13 +16,14 @@ function initMap(){
             title: titles,
             animation: google.maps.Animation.DROP
             });
-          // push each marker in to markers array
-          marker.setMap(map);
-          //declaring the content
-          var content = models[i].name;
-          //infowindow class to show information
+
+          markers.push(marker);
+          //marker.setMap(map);
+         
+          content = models[i].name;
+          
           infowindow = new google.maps.InfoWindow({maxWidth: 200});
-          //Event Listener when clicked on marker display info window
+          
           marker.addListener('click',(function(marker,content){
               return function(){
               infowindow.setContent(content);
@@ -28,17 +31,22 @@ function initMap(){
             })(marker,content));
       }
 
+       for(var i = 0; i < markers.length; i++){
+      		markers[i].setMap(map);
+      	}
+
 	var viewModel = function(){
 		var self = this;
 		this.list = ko.observableArray();
 		for(var i = 0; i < models.length; i++){
 			this.list.push(models[i].name);
-		};
+		};	
 		this.showinfo = function(){
+			
 			infowindow.setContent(content);
-			infowindow.open(map,marker);
-		}
-
+			infowindow.open(map,marker[i]);
+		};
+	
 	}
 	ko.applyBindings(new viewModel());
 }
