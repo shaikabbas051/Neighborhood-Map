@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id='optionsTab'>
-		<input id="search" type="search" placeholder="ex: charminar">
+		<input id="search" type="search" placeholder="ex: charminar" onkeyup="myFunction">
 		<ul  id="listitems" data-bind="foreach: list">
 			<li data-bind="click: $parent.showinfo"><a href="#"><span data-bind="text: $data"></span></a></li>
 		</ul>
