@@ -35,8 +35,7 @@ function initMap(){
       		markers[i].setMap(map);
       	}
 
-	var viewModel = function(){
-		var self = this;
+	var viewModel = function(data){
 		this.list = ko.observableArray();
 		for(var i = 0; i < models.length; i++){
 			this.list.push(models[i].name);
@@ -44,7 +43,7 @@ function initMap(){
 		this.showinfo = function(){
 			
 			infowindow.setContent(content);
-			infowindow.open(map,marker[i]);
+			infowindow.open(map,marker);
 		};
 	
 	}
