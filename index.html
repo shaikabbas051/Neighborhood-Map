@@ -6,20 +6,36 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="js/lib/knockout-3.4.2.js"></script>
 	<script src="js/lib/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Rokkitt" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
-	<div id='optionsTab'>
-		<input type="text" placeholder="Enter Favourite Place" data-bind="textInput: findPlace, valueUpdate: 'afterkeydown', event: {keyup: filterSearch}">
-		<ul  id="listitems" data-bind="foreach: listItems">
-			<li data-bind="click: $parent.showInfowindow"><a href="#"><span data-bind="text: title"></span></a></li>
-		</ul>
-	</div>
-	<div id="map"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-2" id="optionsTab">
+				<input type="text" placeholder="Enter Favourite Place" data-bind="textInput: findPlace, valueUpdate: 'afterkeydown', event: {keyup: filterSearch}">
+				<ul  id="listitems" data-bind="foreach: listItems">
+					<li data-bind="click: $parent.showInfowindow"><a href="#"><span data-bind="text: title"></span></a></li>
+				</ul>
+			</div>
 	
+			<div class="col-xl-10">
+				<div class="row">
+					<h3 class="col-xl-12" class="center">My Neighborhood</h3>
+				</div>
+				<div class="row">
+					<div id="map" class="col-sm-12"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<!--Scripts-->
 	<script src="js/knockout.js"></script>
 	<script src="js/model.js"></script>
+	<script src="js/map-styles.js"></script>
 	<script async defer src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBLqz9_TGaRLlzRXjzKABgewLRXy1nHSbg&callback=initMap"></script>
 </body>
 </html>
