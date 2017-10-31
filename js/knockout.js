@@ -1,10 +1,11 @@
-var markers = ko.observableArray();//Global Variable
+var markers = ko.observableArray(), descriptions = ko.observableArray();//Global Variable
 
 function initMap(){
 	//setup map
 	map  = new google.maps.Map(document.getElementById('map'),{
 		center: {lat: 17.385044,lng: 78.486671},
 		zoom: 11,
+		styles: styles
 		
 	});
 	//call viewModel
@@ -21,10 +22,13 @@ var viewModel = function(data){
 		//declaring name and loation
 	   	var titles = models[i].name;
 	 	var positions = models[i].location;
+	 	var description = models[i].description;
+	 	descriptions.push(description);
 		//marker object
 		var marker = new google.maps.Marker({
 	  		map: map,
 			position: positions,
+			description: description,
 			title: titles,
 			animation: google.maps.Animation.DROP
 		});//marker end
@@ -47,7 +51,7 @@ var viewModel = function(data){
 	function populateInfoWindow(marker, infowindow){
 			if(infowindow.marker != marker){
 				infowindow.marker = marker;
-				infowindow.setContent(marker.title);
+				infowindow.setContent('<strong style="font-size: 20px; font-family: Rokkitt, serif">'+marker.title+'</strong>' + '<br>' + '<p style="font-family: Rokkitt, serif">'+marker.description+'</p>');
 				infowindow.open(map, marker);
 			}
 	}//end populate window
