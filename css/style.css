@@ -1,30 +1,27 @@
-html,body{
-	height: 100%;
-	width: 100%;
-	background-color: #0e1a2d;
+body{
+	
 	font-family: 'Source Sans Pro', sans-serif;
 }
-#map{
+html{
 	height: 100%;
-	left: 240px;
-	width: calc(100% - 240px);
+	width: 100%;
+	background-color: #0e1a2d !Important;
+}
+#map{
+	height: 600px;
 }
 #optionsTab{
-	height: 100%;
-	max-width: 240px;
-	position: absolute;
 	z-index: 5;
 	background-color: #0e1a2d;
-	margin-left: -30px;
-	
 }
 li{
 	list-style-type: none;
 	line-height: 35px;
 	font-size: 20px;
+	margin-left: -30px;
 }
 span:hover{
-	color: #ffffff
+	color: #ffffff;
 }
 span{
 	color: #9b9b9b;
@@ -32,6 +29,9 @@ span{
 a{
 	text-decoration: none;
 }
-input{
-	margin-left: 40px;
+h3{
+	color: #ffffff !Important;
+	text-align: center;
+	background-color: #0e1a2d;
+
 }
