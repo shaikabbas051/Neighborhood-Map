@@ -3,13 +3,13 @@ var models = [
 		name: 'Charminar',
 		location: {lat: 17.361564,lng: 78.474665},
 		type: 'establishment',
-		description:'The Charminar, constructed in 1591, is a monument and mosque located in Hyderabad, Telangana, India. The landmark has become a global icon of Hyderabad, listed among the most recognized structures of India.'
+		description:'The Charminar is a monument and mosque located in Hyderabad. The landmark has become a global icon of Hyderabad, listed among the most recognized structures of India.'
 	},
 	{
 		name: 'Wonderla',
 		location: {lat: 17.217318,lng: 78.529179},
 		type: 'amusement_park',
-		description: 'Wonderla Holidays, is one of the largest amusement park operators company in India. Wonderla Hyderabad offers 25 land based rides and 18 water based attractions on 50acres of land. Wonderla Amusement Park is located 28 km away from Hyderabad City.'
+		description: 'Wonderla Holidays, is one of the largest amusement park operators company in India.'
 	},
 	{
 		name: 'Nehru Zoological Park',
@@ -21,7 +21,7 @@ var models = [
 		name: 'Golconda Fort',
 		location: {lat: 17.383309,lng: 78.401053},
 		type: 'establishment',
-		description: 'Golkonda, also known as Golconda, Gol konda, or Golla konda, is a citadel and fort in Southern India and was the capital of the medieval sultanate of the Qutb Shahi dynasty, is situated 11 kilometres west of Hyderabad.'
+		description: 'Golkonda is a citadel and fort in Southern India and was the capital of the medieval sultanate of the Qutb Shahi dynasty.'
 	},
 	{
 		name: 'Osmania University',
@@ -33,7 +33,7 @@ var models = [
 		name: 'Birla Mandir',
 		location: {lat: 17.406237,lng: 78.469060},
 		type: 'hindu_temple',
-		description: 'Birla Mandir is a Hindu temple, built on a 280 feet high hillock called Naubath Pahad on a 13 acres plot. The construction took 10 years and was opened in 1976 by Swami Ranganathananda of Ramakrishna Mission.'
+		description: 'Birla Mandir is a Hindu temple, built on a 280 feet high hillock called Naubath Pahad on a 13 acres plot.'
 	},
 	{
 		name: 'Spanish Mosque',
@@ -45,7 +45,7 @@ var models = [
 		name: 'Osman sagar',
 		location: {lat: 17.376266,lng: 78.298864},
 		type: 'park',
-		description:'Osman Sagar, popularly known as Gandipet, is a reservoir in the Indian city of Hyderabad. The lake is around 46 km², and the reservoir is around 29 km², with total level of 1,790 feet and a capacity of 3.9 tmc ft.'
+		description:'Osman Sagar is a reservoir in the Indian city of Hyderabad.'
 	},
 	{
 		name: 'Rajiv Gandhi International Airport',
