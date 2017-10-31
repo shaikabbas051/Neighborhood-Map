@@ -51,7 +51,7 @@ var viewModel = function(data){
 	function populateInfoWindow(marker, infowindow){
 			if(infowindow.marker != marker){
 				infowindow.marker = marker;
-				infowindow.setContent('<strong style="font-size: 20px; font-family: Rokkitt, serif">'+marker.title+'</strong>' + '<br>' + '<p style="font-family: Rokkitt, serif">'+marker.description+'</p>');
+				infowindow.setContent('<strong style="font-size: 20px; font-family: Noto serif, serif">'+marker.title+'</strong>' + '<br>' + '<p style="font-family: Noto serif, serif">'+marker.description+'</p>');
 				infowindow.open(map, marker);
 			}
 	}//end populate window
