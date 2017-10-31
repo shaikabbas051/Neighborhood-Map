@@ -1,10 +1,40 @@
 var styles = [
   {
+    "featureType": "administrative.country",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#0000ff"
+      },
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#858585"
+      }
+    ]
+  },
+  {
     "featureType": "landscape.man_made",
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#d6d6d6"
+        "color": "#c5c58b"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ff0080"
       }
     ]
   },
@@ -25,7 +55,7 @@ var styles = [
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#e2e2c5"
+        "color": "#dadab6"
       }
     ]
   },
@@ -34,7 +64,16 @@ var styles = [
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#008442"
+        "color": "#009d4f"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ff0000"
       }
     ]
   },
@@ -82,7 +121,7 @@ var styles = [
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#8ee3ea"
+        "color": "#caeeff"
       }
     ]
   },
