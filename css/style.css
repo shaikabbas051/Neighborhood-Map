@@ -1,7 +1,8 @@
 html,body{
 	height: 100%;
 	width: 100%;
-	background-color: #619bf9;
+	background-color: #0e1a2d;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 #map{
 	height: 100%;
@@ -13,21 +14,24 @@ html,body{
 	max-width: 240px;
 	position: absolute;
 	z-index: 5;
-	background-color: #619bf9;
+	background-color: #0e1a2d;
 	margin-left: -30px;
+	
 }
 li{
 	list-style-type: none;
 	line-height: 35px;
 	font-size: 20px;
-	
 }
 span:hover{
 	color: #ffffff
 }
-a {
-text-decoration: none;
+span{
+	color: #9b9b9b;
+}
+a{
+	text-decoration: none;
 }
 input{
-	margin-left: 30px;
+	margin-left: 40px;
 }

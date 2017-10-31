@@ -7,12 +7,13 @@
 	<script src="js/lib/knockout-3.4.2.js"></script>
 	<script src="js/lib/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
 	<div id='optionsTab'>
-		<input id="search" type="search" placeholder="ex: charminar" onkeyup="myFunction">
-		<ul  id="listitems" data-bind="foreach: list">
-			<li data-bind="click: $parent.showinfo"><a href="#"><span data-bind="text: $data"></span></a></li>
+		<input type="text" placeholder="Enter Favourite Place" data-bind="textInput: findPlace, valueUpdate: 'afterkeydown', event: {keyup: filterSearch}">
+		<ul  id="listitems" data-bind="foreach: listItems">
+			<li data-bind="click: $parent.showInfowindow"><a href="#"><span data-bind="text: title"></span></a></li>
 		</ul>
 	</div>
 	<div id="map"></div>
