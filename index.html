@@ -6,7 +6,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="js/lib/knockout-3.4.2.js"></script>
 	<script src="js/lib/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Rokkitt" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Noto+Serif" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,7 +14,9 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xl-2" id="optionsTab">
-				<input type="text" placeholder="Enter Favourite Place" data-bind="textInput: findPlace, valueUpdate: 'afterkeydown', event: {keyup: filterSearch}">
+				<h5>Search for Place</h5>
+				<div id="searchpadding">
+				<input type="text" placeholder="Enter Favourite Place" data-bind="textInput: findPlace, valueUpdate: 'afterkeydown', event: {keyup: filterSearch}"></div>
 				<ul  id="listitems" data-bind="foreach: listItems">
 					<li data-bind="click: $parent.showInfowindow"><a href="#"><span data-bind="text: title"></span></a></li>
 				</ul>
@@ -24,8 +26,8 @@
 				<div class="row">
 					<h3 class="col-xl-12" class="center">My Neighborhood</h3>
 				</div>
-				<div class="row">
-					<div id="map" class="col-sm-12"></div>
+				<div class="row" class="mapcenter">
+					<div id="map" class="col-xl-12"></div>
 				</div>
 			</div>
 
