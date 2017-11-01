@@ -39,7 +39,7 @@ var viewModel = function(data){
 				populateInfoWindow(this, infowindow);
 			});
 		});
-	};//end of for loop
+	}//end of for loop
 
 	
 	//when listItems are clicked, show infowindow of associated marker
@@ -71,7 +71,7 @@ var viewModel = function(data){
         var filter = this.findPlace().toLowerCase();
         if (!filter) {
             markers().forEach(function(marker){
-				marker.setVisible(true)
+				marker.setVisible(true);
 			});
             return markers();
 
@@ -84,7 +84,7 @@ var viewModel = function(data){
             });
         }
     }, this);
-}//end viewModel
+};//end viewModel
 	
 
  
