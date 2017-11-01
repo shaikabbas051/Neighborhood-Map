@@ -8,9 +8,9 @@ html{
 }
 #map{
 	height: 86vh;
+	width: 100%;
 	position: absolute;
-	width: 80%;
-	border-radius: 10px;
+	border-radius: 10px;	
 }
 #Sidebar{
 	z-index: 5;
@@ -24,7 +24,6 @@ li{
 }
 span:hover{
 	color: #ffffff;
-
 }
 span{
 	color: #9b9b9b;

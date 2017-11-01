@@ -10,11 +10,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<!--Google fonts link-->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Noto+Serif" rel="stylesheet">
+	<!--External Css-->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
+			<!--Options tab-->
 			<div class="col-xl-2" id="Sidebar">
 				<h5>Search for Place</h5>
 				<div id="searchBar">
@@ -37,10 +39,11 @@
 		</div>
 	</div>
 	
-	<!--Scripts-->
+	<!--External Scripts-->
 	<script src="js/knockout.js"></script>
 	<script src="js/model.js"></script>
 	<script src="js/map-styles.js"></script>
-	<script async defer src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBLqz9_TGaRLlzRXjzKABgewLRXy1nHSbg&callback=initMap"></script>
+	<!--Google Map Api-->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBLqz9_TGaRLlzRXjzKABgewLRXy1nHSbg&callback=initMap"></script>
 </body>
 </html>
