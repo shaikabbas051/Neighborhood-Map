@@ -1,12 +1,10 @@
-body{
-	
+body{	
 	font-family: 'Source Sans Pro', sans-serif;
-	background-color: #0e1a2d !Important;
+	background-color: #0e1a2d;
 }
 html{
 	height: 100%;
 	width: 100%;
-	
 }
 #map{
 	height: 86vh;
@@ -14,7 +12,7 @@ html{
 	width: 80%;
 	border-radius: 10px;
 }
-#optionsTab{
+#Sidebar{
 	z-index: 5;
 	background-color: #0e1a2d;
 }
@@ -23,15 +21,15 @@ li{
 	line-height: 38px;
 	font-size: 20px;
 	margin-left: -30px;
-	text-decoration: none;
 }
 span:hover{
 	color: #ffffff;
+
 }
 span{
 	color: #9b9b9b;
 }
-#listItems{
+a, a:hover{
 	text-decoration: none;
 }
 h3{
@@ -44,9 +42,6 @@ h5{
 	color: #ffffff;
 	padding: 40px 0 10px 0;
 }
-#searchpadding{
+#searchBar{
 	padding: 10px 0 10px 0;
-}
-.mapcenter{
-	float: center;
 }
