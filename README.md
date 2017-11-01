@@ -10,8 +10,8 @@ A single page application featuring a map of my Neighborhood. It is created by u
 3. Get the same details by clicking the list items on the left side.
 4. Enter the place in search bar to get more specific details
 ### References
-[W3schools](https://www.w3schools.com/)
-[Bootstrap](http://getbootstrap.com/)
-[Google Javascript API's](https://developers.google.com/maps/documentation/javascript/)
-[Knockout](http://knockoutjs.com/documentation/introduction.html)
+1. [W3schools](https://www.w3schools.com/)
+2. [Bootstrap](http://getbootstrap.com/)
+3. [Google Javascript API's](https://developers.google.com/maps/documentation/javascript/)
+4. [Knockout](http://knockoutjs.com/documentation/introduction.html)
 
