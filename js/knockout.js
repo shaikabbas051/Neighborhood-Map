@@ -1,4 +1,4 @@
-var markers = ko.observableArray(), descriptions = ko.observableArray();//Global Variable
+var markers = ko.observableArray();//Global Variable
 
 function initMap(){
 	//setup map
@@ -23,7 +23,7 @@ var viewModel = function(data){
 	   	var titles = models[i].name;
 	 	var positions = models[i].location;
 	 	var description = models[i].description;
-	 	descriptions.push(description);
+	 	
 		//marker object
 		var marker = new google.maps.Marker({
 	  		map: map,
@@ -55,16 +55,18 @@ var viewModel = function(data){
 				infowindow.open(map, marker);
 			}
 	}//end populate window
-	
+
+	//observe the input text
 	this.findPlace = ko.observable("");
+	//all markers visible default
     this.filterSearch=function(){
         if(this.findPlace().lenth===0){
             markers().forEach(function(marker) {
-                marker.setVisible(false);
+                marker.setVisible(true);
             });
         }
-    }
-
+    };
+    //display the list items and markers accordingly with search input
     this.listItems = ko.computed(function() {
         var filter = this.findPlace().toLowerCase();
         if (!filter) {
@@ -74,10 +76,11 @@ var viewModel = function(data){
             return markers();
 
         } else {
+        	infowindow.close();//when input text entered close previous infowindow
             return ko.utils.arrayFilter(markers(), function(item) {
-                var itIsAMatch = item.title.toLowerCase().indexOf(filter) > -1;
-                item.setVisible(itIsAMatch);
-                return itIsAMatch;
+                var match = item.title.toLowerCase().indexOf(filter) > -1;//locate for the input text
+                item.setVisible(match);
+                return match;
             });
         }
     }, this);
