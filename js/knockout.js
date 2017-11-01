@@ -46,7 +46,7 @@ var viewModel = function(data){
 		$.ajax({
 			method: 'GET',
             dataType: "json",
-            url: "https://api.foursquare.com/v2/venues/" + marker.id + "?client_id=OLVWHYOR5EMW5JN00JANKRL0R314QJY2JB1QI1R4IDWLUL4J&client_secret=RVBWXZ5JXUVPOWQURKYJBYHB3RAHH0LYSE0HQRLLKXPOAD4C",
+            url: "https://api.foursquare.com/v2/venues/" + marker.id + "?client_id=OLVWHYOR5EMW5JN00JANKRL0R314QJY2JB1QI1R4IDWLUL4J&client_secret=RVBWXZ5JXUVPOWQURKYJBYHB3RAHH0LYSE0HQRLLKXPOAD4C&v=20171101",
             success: function(data){
             	var venue = data.response.venue;
             	return marker.timing = data.response.venue.hours.timeframes[0].open[0].start;
