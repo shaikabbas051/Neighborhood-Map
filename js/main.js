@@ -66,13 +66,13 @@ var viewModel = function(data){
                     marker.photo = imgurl.prefix + "200x100" + imgurl.suffix;
                 } else {
                     marker.photo = 'Image not found';
-                };
+                }
                 //check for rating property
                 if(ratingurl.hasOwnProperty('rating')){
                 	marker.rating = ratingurl.rating + "/10";
                 }else{
                 	marker.rating = 'No ratings yet';
-                };
+                }
             },
             //on error return this message
             error: function() {
@@ -135,6 +135,4 @@ var viewModel = function(data){
 };//end viewModel
 function errorMessage(){
 	alert("Can't load Google Map");
-};
-
- 
+}
