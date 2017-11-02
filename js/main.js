@@ -132,7 +132,7 @@ function viewModel(){
             });
         }
     }, this);
-};//end viewModel
+}//end viewModel
 function errorMessage(){
 	alert("Can't load Google Map");
 }
