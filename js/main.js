@@ -12,7 +12,7 @@ function initMap(){
 }//end initMap function
 
 //viewModel
-var viewModel = function(data){
+function viewModel(){
 	
 	//create infowindow object
 	var infowindow = new google.maps.InfoWindow({maxWidth: 200});
@@ -76,7 +76,7 @@ var viewModel = function(data){
             },
             //on error return this message
             error: function() {
-                marker.photo = "Something went wrong";
+                alert("Foursquare api not successful");
             }
         });
     });
